@@ -1,4 +1,4 @@
-FROM node:4.6
+FROM ubuntu:14.04.5
 MAINTAINER Alfred UC b6pzeusbc54tvhw5jgpyw8pwz2x6gs@gmail.com
 
 # Install vim-nox, python, zip
