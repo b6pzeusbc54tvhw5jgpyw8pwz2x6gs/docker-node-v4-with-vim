@@ -8,7 +8,7 @@ RUN apt-get update \
 RUN add-apt-repository ppa:jonathonf/vim -y \
  && apt-get update \
  && apt-get install wget curl vim-nox python2.7-dev zip -yq
-
+ 
 # Install latest version of pip
 RUN curl -sL https://bootstrap.pypa.io/get-pip.py | python3 -
 
@@ -19,7 +19,8 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - \
  && sudo apt-get install -y nodejs
 
 # Install yarn
-RUN npm install yarn -g
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN apt-get update && apt-get install yarn
 
 # cleaning
 RUN apt-get clean \
