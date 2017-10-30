@@ -13,7 +13,7 @@ RUN add-apt-repository ppa:jonathonf/vim -y \
 RUN curl -sL https://bootstrap.pypa.io/get-pip.py | python3 -
 
 # Install AWS CLI
-RUN pip install awscli awsebcli
+RUN pip install awscli docker-compose
 
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - \
  && sudo apt-get install -y nodejs
